@@ -18,7 +18,7 @@ $ cosign sign $IMAGE
 To create a test image to sign using [ttl.sh](https://ttl.sh), run the following commands:
 
 ```
-$ IMAGE_NAME=$(uuidgen)
+$ IMAGE_NAME=$(uuidgen | tr '[:upper:]' '[:lower:]')
 $ IMAGE=ttl.sh/$IMAGE_NAME:1h
 $ cosign copy alpine $IMAGE
 ```
